@@ -90,13 +90,20 @@ public class Game  {
         int columns = getLengthCol(board);
         System.out.println("" + "\n");
 
-        System.out.print("_  ");
+        System.out.print("G | ");
         for(int i =0; i <columns; i++){
+            if(i < 8){
             System.out.print(  i+1 +" | ");
-
+            } else {
+                System.out.print(  i+1 +" |");
+            }
         }
         for (int x = 0; x<rows; x++, counterRowsNumbers++ ){
-            System.out.print( "\n"+ counterRowsNumbers + "| ");
+            if(x < 9){
+                System.out.print( "\n"+ counterRowsNumbers + " | ");
+            }else {
+                System.out.print("\n" + counterRowsNumbers + "| ");
+            }
             for(int y = 0; y<columns; y++){
                 System.out.print(  board[x][y]+ " | ");
 
